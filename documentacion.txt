@@ -1,0 +1,64 @@
+19/12/2017
+Agustín Padrón
+
+En este archivo se encontrará toda la información necesaria para operar y
+modificar a "4Rober" que es un robot similar a un automóvil, con 4 ruedas 
+y 4 motores independientes controlados de a pares izquierdo y derecho
+sin dirección controlados por una placa Arduino
+Uno.
+
+A continuación se detallará todo el hardware que compone a 4Rober:
+
+1x Arduino Uno.
+1x ProtoShield.
+
+1x L7805 Modulo regulador de tensión :
+	(visto de frente con disipador hacia atrás):
+	1. INPUT (7V a 35V)
+	2. GND
+	3. OUTPUT (5V)
+
+1x SN754410 Puente H para controlar 4 motores
+	(visto de frente con la mueca hacia arriba)
+	1. M1 Enable (+5V)
+	2. M1 Avanza (PWM)
+	3. M1+
+    4. GND
+	5. GND
+	6. M1-
+	7. M1 Retroc (PWM)
+	8. Motor Power + hasta 36V
+	
+	9.	5v+ (alimentación placa)
+	10. M2 Retroc (PWM)
+	11. M2+
+	12. GND
+	13. GND
+	14. M2-
+	15. M2 Avanza (PWM)
+	16. M2 Enable (+5V)
+
+1x BT Board 1.6
+2x HC-SRO4 (Sensor de distancia)
+4x Motores con reductora y rueda
+	3V a 6V, 150 mA. 48 a 1
+
+Identificador de cables:
+
+-ProtoShield 2 pares amarillo y blanco masa y refrigeración de puenteH 
+-Un par rojo y naranja para la alimentación de los motores, pin 8 puenteH, entrada 7V
+-Un par naranja y amarillo para el control de los motores derechos 10 y 11 PWM de arduino a 10 y 15 del puenteH
+-Un par blanco y rojo para el control de los motores izquierdos 5 y 6 PWM del arduino
+a 2 y 7 del puenteH
+
+PinOut Arduino:
+
+2 y 4:	 TX y RX de Bluetooth
+5:		 2 del puenteH, manejo de los motores derechos +
+6: 		 7 del puenteH, manejo de los motores derechos -
+7: 		 Echo sensor derecho.
+8:		 Trig sensor derecho.
+9: 		 Echo sensor izquierdo.
+10:		 10 del puenteH, manejo de los motores derechos +
+11:		 15 del puenteH, manejo de los motores derechos -
+12: 	 Trig sensor derecho.
