@@ -62,3 +62,15 @@ PinOut Arduino:
 10:		 10 del puenteH, manejo de los motores derechos +
 11:		 15 del puenteH, manejo de los motores derechos -
 12: 	 Trig sensor derecho.
+
+Estados posibles
+
+0: neutro
+1: avanza
+2: retrocede
+3: izquierda
+4: derecha
+5: frena
+6: [sacudir]*
+
+*por Bluetooth
